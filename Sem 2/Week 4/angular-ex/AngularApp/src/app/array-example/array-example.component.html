@@ -1,0 +1,10 @@
+<p>array-example works!</p>
+
+<ul>
+    <li *ngFor= "let Names of Names">{{ Names }}
+        <app-profile [name]="Names"></app-profile>
+
+    </li>
+</ul>
+
+<button (click) = "onButtonClick()">Add Name</button>
