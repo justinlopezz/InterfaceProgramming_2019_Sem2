@@ -337,11 +337,9 @@
 <ul>
   <li *ngFor="let item of items">
     
-    
-    <input type="checkbox">
-    {{item}} Date:     DateComp:
-    <button (click)="deleteMsg(item)" type="submit">X</button> 
-    
+    <p><strong>{{item}}</strong><input type="checkbox"></p>
+    <p><strong>CreationDate:</strong> {{ CurrentDate | date:'dd-MM-yyyy hh:mm a'}} <button (click)="deleteMsg(item)" type="submit">X</button></p>
+    <p><strong>CompletionDate:</strong></p>
 
   </li>
 </ul>
@@ -366,5 +364,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-

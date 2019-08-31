@@ -13,7 +13,6 @@ export class AppComponent {
     this.items.push(newItem);
   }
 
-
   deleteMsg(msg: string) {
     const index: number = this.items.indexOf(msg);
     if (index !== -1) {
@@ -21,12 +20,12 @@ export class AppComponent {
     }
   } 
 
+  CurrentDate = new Date();
+
   title = 'angular';
 
   onkeyup(input: string){
 
   }
-
-
 }
 
