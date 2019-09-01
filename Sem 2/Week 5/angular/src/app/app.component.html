@@ -338,14 +338,14 @@
   <li *ngFor="let item of items">
     
     <p><strong>{{item}}</strong><input type="checkbox"></p>
-    <p><strong>CreationDate:</strong> {{ CurrentDate | date:'dd-MM-yyyy hh:mm a'}} <button (click)="deleteMsg(item)" type="submit">X</button></p>
-    <p><strong>CompletionDate:</strong></p>
+    <p><strong>CreationDate: </strong> <app-profile> </app-profile> <button (click)="deleteMsg(item)" type="submit">X</button></p>
+    <p><strong>CompletionDate: </strong> <app-completion-date></app-completion-date> </p>
 
     <br>
   </li>
   
 </ul>
-
+ 
   <!-- Highlight Card -->
 
   <!-- Resources -->
