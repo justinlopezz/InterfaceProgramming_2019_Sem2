@@ -2,18 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MyTodoListComponent } from './my-todo-list/my-todo-list.component';
-import { ProfileComponent } from './profile/profile.component';
-import { CompletionDateComponent } from './completion-date/completion-date.component';
-
-
+import { TodoInputComponent } from './todo-input/todo-input.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyTodoListComponent,
-    ProfileComponent,
-    CompletionDateComponent
+    TodoInputComponent,
+    TodoItemComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule
