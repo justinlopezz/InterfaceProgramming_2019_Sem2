@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetService } from '../planet.service';
 
 @Component({
   selector: 'app-planets-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: PlanetService) { }
 
   ngOnInit() {
   }

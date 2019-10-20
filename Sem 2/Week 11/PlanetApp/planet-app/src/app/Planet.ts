@@ -1,20 +1,13 @@
 export class Planet {
+    
+    name : string;
+    moons : number;
+    DistanceFromSun : number;
 
-    constructor(
-        public name: string, 
-        public moons: number, 
-        public DistanceFromSun: number, 
-        ){}
-
-    public get_name(): string {
-        return this.name;
+    constructor(name: string, moons: number, DistanceFromSun: number){
+        this.name = name;
+        this.moons = moons;
+        this.DistanceFromSun = DistanceFromSun;
     }
 
-    public get_moons(): number {
-        return this.moons;
-    }
-
-    public get_DistanceFromSun(): number {
-        return this.DistanceFromSun;
-    }
 }

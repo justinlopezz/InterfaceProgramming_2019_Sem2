@@ -15,6 +15,7 @@ import { PlanetsDetailComponent } from './planets-detail/planets-detail.componen
   ],
   imports: [
     BrowserModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
