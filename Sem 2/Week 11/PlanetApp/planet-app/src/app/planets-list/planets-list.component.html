@@ -1,6 +1,7 @@
-<p>planets-list works!</p>
+
 <ul>
     <li *ngFor="let planet of service.planets">
-
+        <app-planets-detail [planet]="planet" (deleteClicked)="deletePlanet(planet)"></app-planets-detail>
+        
     </li>
 </ul>

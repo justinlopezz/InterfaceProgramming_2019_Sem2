@@ -1,2 +1,7 @@
-<p>planets-create works!</p>
-<input [(ngmodel)] = "planetName" type="string" /> 
+
+<input [(ngModel)] = "planetName" type="text" placeholder ="Planet"/> 
+<input [(ngModel)] = "planetMoons" type="text" placeholder="Moons"/> 
+<input [(ngModel)] = "planetDistance" type="text" placeholder="Distance"/> 
+
+<button (click)='OnPlanetClick()'>Click me</button>
+<button (click)='onSortClick()'>Sort Planets</button>
