@@ -10,23 +10,27 @@ export class PostsService {
 
   posts : Post[] = [];
 
-  loading : boolean;
+  loading : boolean = false;
 
   constructor(private http: HttpClient) { }
 
-
   getPosts(){
 // loading true
-    
-    this.http.get<Post[]>("https://jsonplaceholder.typicode.com/posts")
+    this.loading = true;
+
+      this.http.get<Post[]>("https://jsonplaceholder.typicode.com/posts")
       .subscribe((data: Post[]) => {
-          this.posts = data;
-          // loading false
-      });
-  }
+        this.posts = data;
+        
+        this.loading = false;
+        
+    });
+    
+}
 
   onClickRefresh(){
-    window.location.reload();
+   this.posts = [];
+   this.getPosts();
   }
 
 }

@@ -318,23 +318,70 @@
   </a>
 </div>
 
+<br><br>
 <button (click) = "onRefresh()" type="submit"> refresh</button>
+<br><br>
 
-<div class="progress-loader" [hidden]="loading" show-hide="contentLoaded">
+<div class="progress-loader" [hidden]="!postsService.loading" show-hide="contentLoaded">
  
     <mat-progress-spinner [mode]="'indeterminate'">
     </mat-progress-spinner>
  
 </div>
 
+<div style="display: table-row">
 
-<ul>
-    <li *ngFor="let post of postsService.posts">
-      <p><strong>UserID: </strong>{{post.userId}}</p>
-      <p><strong>ID: </strong>{{post.id}}</p>
-      <p><strong>Title: </strong>{{post.title}}</p>
-      <p><strong>Body: </strong>{{post.body}}</p>
-      <br>
-    </li>
-  </ul>
+  <div style="width: 600px; display:table-cell;">
+    <p><strong>Posts</strong></p>
+    <ul>
+      <li *ngFor="let post of postsService.posts">
+        <p><strong>UserID: </strong>{{post.userId}}</p>
+        <p><strong>ID: </strong>{{post.id}}</p>
+        <p><strong>Title: </strong>{{post.title}}</p>
+        <p><strong>Body: </strong>{{post.body}}</p>
+        <br>
+      </li>
+    </ul>
+  </div>
 
+  <div style="display: table-cell;">
+    <p><strong>Users</strong></p>
+    <ul>
+      <li *ngFor="let user of usersService.users">
+        <p><strong>ID: </strong>{{user.id}}</p>
+        <p><strong>Name: </strong>{{user.name}}</p>
+        <p><strong>Username: </strong>{{user.username}}</p>
+
+        <br>
+
+        <p><strong>Address: </strong></p>
+        <p><strong>Street: </strong>{{user.address.street}}</p>
+        <p><strong>Suite: </strong>{{user.address.suite}}</p>
+        <p><strong>City: </strong>{{user.address.city}}</p>
+        <p><strong>Zipcode: </strong>{{user.address.zipcode}}</p>
+
+        <br>
+
+        <p><strong>Geo: </strong></p>
+        <p><strong>Long: </strong>{{user.address.geo.lng}}</p>
+        <p><strong>Lat: </strong>{{user.address.geo.lat}}</p>
+
+        <br>
+
+        <p><strong>Phone: </strong>{{user.phone}}</p>
+        <p><strong>Website: </strong>{{user.website}}</p>
+      
+        <br>
+      
+        <p><strong>Company: </strong></p>
+        <p><strong>Name: </strong>{{user.company.name}}</p>
+        <p><strong>CatchPhrase: </strong>{{user.company.catchPhrase}}</p>
+        <p><strong>BS: </strong>{{user.company.bs}}</p>
+
+        <br>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
